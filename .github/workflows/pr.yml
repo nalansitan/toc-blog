@@ -1,0 +1,15 @@
+name: Pull Request Workflow
+on: 
+  pull_request
+
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+    - name: Code checkout
+      uses: actions/checkout@v1
+
+    - name: Markdown link check
+      uses: gaurav-nelson/github-action-markdown-link-check@0.4.0
